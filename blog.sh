@@ -86,7 +86,7 @@ rm -f mysql84-community-release-el9-1.noarch.rpm
 
 # 创建 WordPress 数据库
 db="wp"
-mysql -u root -p"$new_pwd" -e "CREATE DATABASE IF NOT EXISTS $db;"
+mysql -u root -p"$new_pwd" -e "CREATE DATABASE IF NOT EXISTS \`$db\`;"
 echo "MySQL 安装及配置完成！"
 
 # 下载并解压 WordPress
