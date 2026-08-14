@@ -72,7 +72,7 @@ yum install -y mysql-server && systemctl enable --now mysqld
 
 # 获取临时密码并修改密码
 temporary_pass=$(grep 'temporary password' /var/log/mysqld.log | awk '{print $NF}')
-new_pwd="BlogData888#"
+new_pwd="Blog888"
 
 if mysqladmin -u root -p"$temporary_pass" password "$new_pwd"; then
     echo "MySQL 密码修改成功！"
